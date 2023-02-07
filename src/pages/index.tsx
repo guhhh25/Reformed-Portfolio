@@ -4,9 +4,9 @@ import SideBar from "../components/sidebar/sidebar";
 
 const Main: FunctionComponent = () => {
   return (
-    <div className="text-white text-lg bg-red-200 w-32 h-screen">
+    <>
       <SideBar item={menuItems as any} />
-    </div>
+    </>
   );
 };
 
