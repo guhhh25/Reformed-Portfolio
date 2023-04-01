@@ -3,11 +3,8 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { useEffect, useState } from "react";
 
 
-interface SideBarProps {
-  item: string[] | [];
-}
 
-const SideBar = (props: SideBarProps) => {
+const SideBar = (props) => {
   const { item } = props;
 
   const [isOpen, setIsOpen] = useState(false);
