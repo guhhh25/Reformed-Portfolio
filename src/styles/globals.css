@@ -32,3 +32,6 @@ hr{
     background: white;
   }
 }
+.flip-horizontal {
+  transform: scaleX(-1);
+}
