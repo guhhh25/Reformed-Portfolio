@@ -2,14 +2,22 @@ import Image from "next/image";
 import { FunctionComponent } from "react";
 import Astronaut from "./../../images/Astronaut.png";
 import Typewriter from "typewriter-effect";
-import { motion, easeInOut } from "framer-motion";
+import { useSpring, animated } from "react-spring";
 
 
 
 
 const Home: FunctionComponent = () => {
 
-
+  const [spring, setSpring] = useSpring(() => ({
+    from: { y: -20 },
+    to: { y: 20 },
+    config: {
+      duration: 1500,
+      reverse: true,
+    },
+    reset: true,
+  }));
 
   return (
     <div className="flex flex-col  md:flex lg:flex-row Leckerli text-[40px] items-center md:py-24 md:px-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-800">
@@ -35,24 +43,19 @@ const Home: FunctionComponent = () => {
       </div>
 
       <div className="flex justify-end w-full">
-        <motion.div
-          animate={{ y: [-20, 20] }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            repeatType: "reverse",
-            ease: easeInOut,
-          }}
-        >
-          
-          <Image
-            src={Astronaut}
-            alt="eae"
-            width={440}
-            height={440}
-            className="flip-horizontal"
-          />
-        </motion.div>
+      <animated.div
+        style={{
+          transform: spring.y.interpolate((y) => `translateY(${y}px)`),
+        }}
+      >
+        <Image
+          src={Astronaut}
+          alt="eae"
+          width={440}
+          height={440}
+          className="flip-horizontal"
+        />
+      </animated.div>
       </div>
       <div className="absolute bottom-0 left-0 w-full">
         <svg
