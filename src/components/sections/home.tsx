@@ -8,24 +8,10 @@ import Typewriter from "typewriter-effect";
 
 
 const Home: FunctionComponent = () => {
-  const anime = require('animejs');
+  
   const myElement = useRef(null);
 
-  useEffect(() => {
-    anime({
-      
-      targets: myElement.current,
-      translateY: [
-        { value: '-20px', duration: 2000 },
-        { value: '20px', duration: 2000 },
-        { value: '-20px', duration: 2000 },
-      ],
-      easing: 'easeInOutQuad',
-      loop: true,
-      direction: 'alternate',
-      delay: 500,
-    });
-  }, []);
+  
 
   return (
     <div className="flex flex-col  md:flex lg:flex-row Leckerli text-[40px] items-center md:py-24 md:px-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-800">
@@ -50,7 +36,7 @@ const Home: FunctionComponent = () => {
         />
       </div>
 
-      <div className="flex justify-end w-full" ref={myElement}>
+      <div className="flex justify-end w-full">
      
         <Image
           src={Astronaut}
