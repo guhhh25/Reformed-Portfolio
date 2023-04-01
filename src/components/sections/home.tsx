@@ -1,23 +1,31 @@
 import Image from "next/image";
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect, useRef } from "react";
 import Astronaut from "./../../images/Astronaut.png";
 import Typewriter from "typewriter-effect";
-import { useSpring, animated } from 'react-spring';
+import anime from 'animejs';
 
 
 
 
 const Home: FunctionComponent = () => {
 
-  const [spring, setSpring] = useSpring(() => ({
-    from: { y: -20 },
-    to: { y: 20 },
-    config: {
-      duration: 1500,
-      reverse: true,
-    },
-    reset: true,
-  }));
+  const myElement = useRef(null);
+
+  useEffect(() => {
+    anime({
+      
+      targets: myElement.current,
+      translateY: [
+        { value: '-20px', duration: 2000 },
+        { value: '20px', duration: 2000 },
+        { value: '-20px', duration: 2000 },
+      ],
+      easing: 'easeInOutQuad',
+      loop: true,
+      direction: 'alternate',
+      delay: 500,
+    });
+  }, []);
 
   return (
     <div className="flex flex-col  md:flex lg:flex-row Leckerli text-[40px] items-center md:py-24 md:px-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-800">
@@ -42,12 +50,8 @@ const Home: FunctionComponent = () => {
         />
       </div>
 
-      <div className="flex justify-end w-full">
-      <animated.div
-        style={{
-          transform: spring.y.interpolate((y) => `translateY(${y}px)`),
-        }}
-      >
+      <div className="flex justify-end w-full" ref={myElement}>
+     
         <Image
           src={Astronaut}
           alt="eae"
@@ -55,8 +59,7 @@ const Home: FunctionComponent = () => {
           height={440}
           className="flip-horizontal"
         />
-      </animated.div>
-      </div>
+          </div>
       <div className="absolute bottom-0 left-0 w-full">
         <svg
           className="waves"
