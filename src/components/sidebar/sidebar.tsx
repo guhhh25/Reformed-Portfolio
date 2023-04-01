@@ -10,6 +10,7 @@ const SideBar = (props: SideBarProps) => {
   const { item } = props;
 
   const [isOpen, setIsOpen] = useState(false);
+  const [isSelected, setIsSelected] = useState(0);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -58,8 +59,8 @@ const SideBar = (props: SideBarProps) => {
                 key={key}
                 className="flex w-full  items-center justify-between px-5 py-4 text-sm cursor-pointer"
               >
-                <p>{item.Title}</p>
-                <p>{item.Icon}</p>
+                <p className={`${isSelected === key ? "text-yellow-500" : ""}`}>{item.Title}</p>
+                <p className={`${isSelected === key ? "text-yellow-500" : ""}`}>{item.Icon}</p>
               </div>
               <div className="px-5">
                 <hr />
