@@ -2,13 +2,13 @@ import Image from "next/image";
 import { FunctionComponent, useEffect, useRef } from "react";
 import Astronaut from "./../../images/Astronaut.png";
 import Typewriter from "typewriter-effect";
-import anime from 'animejs';
+
 
 
 
 
 const Home: FunctionComponent = () => {
-
+  const anime = require('animejs');
   const myElement = useRef(null);
 
   useEffect(() => {
