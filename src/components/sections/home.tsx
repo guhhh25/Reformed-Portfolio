@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FunctionComponent } from "react";
 import Astronaut from "./../../images/Astronaut.png";
 import Typewriter from "typewriter-effect";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated } from 'react-spring';
 
 
 
