@@ -51,7 +51,7 @@ const SideBar = (props: SideBarProps) => {
   } text-white transition-all duration-300 ease-in-out`}
 >
         <div className={`${
-    isOpen ? "w-[320px]" : "w-0 hidden"}   h-32 w-32 md:mt-12 mb-12 mt-12   rounded-full bg-white  `}/>
+    isOpen ? "w-[130px]" : "w-0 hidden"}   h-32 w-32 md:mt-12 mb-12 mt-12   rounded-full bg-white  `}/>
         {item.map((item, key) => {
           return (
             // eslint-disable-next-line react/jsx-key
