@@ -34,7 +34,7 @@ const SideBar = (props: SideBarProps) => {
   }, []);
 
   return (
-    <div className="absolute md:static z-10">
+    <div className="absolute md:static z-20">
       <nav>
         <div className="md:hidden flex items-center absolute ">
           <AiOutlineMenu
