@@ -15,6 +15,9 @@ body {
   box-sizing: border-box;
 }
 
+hr{
+  border-color: #525354;
+}
 
 .Leckerli{
   font-family: 'Great Vibes', cursive;
@@ -26,6 +29,6 @@ body {
   }
   body {
     color: white;
-    background: black;
+    background: white;
   }
 }
