@@ -1,9 +1,6 @@
 import Image from "next/image";
 import { AiOutlineMenu } from "react-icons/ai";
-
-import { Menu } from "./../../jsx/menuIcon";
-
-import { FunctionComponent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface SideBarProps {
   item: string[] | [];
@@ -22,6 +19,8 @@ const SideBar = (props: SideBarProps) => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
         setIsOpen(true);
+      }else{
+        setIsOpen(false);
       }
     };
 
@@ -33,7 +32,7 @@ const SideBar = (props: SideBarProps) => {
   }, []);
 
   return (
-    <>
+    <div className="absolute md:static z-10">
       <nav>
         <div className="md:hidden flex items-center absolute ">
           <AiOutlineMenu
@@ -46,11 +45,11 @@ const SideBar = (props: SideBarProps) => {
       </nav>
       <div
   className={`md:flex flex flex-col items-center bg-[#1C1C1C] h-screen ${
-    isOpen ? "w-[320px]" : "w-0"
+    isOpen ? "w-[320px]" : "w-0 hidden"
   } text-white transition-all duration-300 ease-in-out`}
 >
         <div className={`${
-    isOpen ? "w-[320px]" : "w-0"}  m-auto h-32 w-32 md:mt-12 mb-12 mt-12   rounded-full bg-white  `}/>
+    isOpen ? "w-[320px]" : "w-0 hidden"}   h-32 w-32 md:mt-12 mb-12 mt-12   rounded-full bg-white  `}/>
         {item.map((item, key) => {
           return (
             // eslint-disable-next-line react/jsx-key
@@ -72,7 +71,7 @@ const SideBar = (props: SideBarProps) => {
           Copyright ©2023 All rights reserved
         </p>
       </div>
-    </>
+      </div>
   );
 };
 

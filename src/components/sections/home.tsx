@@ -1,31 +1,71 @@
-import Image from 'next/image';
-import { FunctionComponent } from 'react';
-import Astronaut from './../../images/Astronaut.png'
-import Typewriter from 'typewriter-effect';
+import Image from "next/image";
+import { FunctionComponent } from "react";
+import Astronaut from "./../../images/Astronaut.png";
+import Typewriter from "typewriter-effect";
 import { motion, easeInOut } from "framer-motion";
 
-const Home:FunctionComponent = () => {
-    return (
-        <div className='hidden md:block Leckerli text-5xl items-center py-24 px-10 text-[#5b21b6]' >
-        <Typewriter  options={{
-        strings: ['Desenvolvedor Fullstack'],
-        autoStart: true,
-        delay: 50,
-        cursor: '_',
-        wrapperClassName: 'typewriter-wrapper',
-        cursorClassName: 'typewriter-cursor',
-        loop: true,
-        
-      }}></Typewriter>
-        <div className='flex justify-end'>
-        <motion.div animate={{ y: [-20, 20] }}
-         transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse", ease: easeInOut }}>
-        <Image src={Astronaut} alt="eae" width={540} height={540} className='flip-horizontal'/>
+const Home: FunctionComponent = () => {
+  return (
+    <div className="flex flex-col  md:flex lg:flex-row Leckerli text-[40px] items-center md:py-24 md:px-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-800">
+     <div className="flex flex-col gap-y-10 w-full mt-8  text-center">
+      <Typewriter
+        onInit={(typewriter) => {
+          typewriter
+            .typeString("Gustavo Henrique")
+
+            .start();
+        }}
+      />
+     
+       <Typewriter
+        onInit={(typewriter) => {
+          typewriter
+          .pauseFor(1000)
+            .typeString("Desenvolvedor Fullstack")
+            .start();
+        }}
+      />
+      </div>
+     
+      <div className="flex justify-end w-full">
+        <motion.div
+          animate={{ y: [-20, 20] }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: easeInOut,
+          }}
+        >
+          <Image
+            src={Astronaut}
+            alt="eae"
+            width={440}
+            height={440}
+            className="flip-horizontal"
+          />
         </motion.div>
-        </div>
-        </div>
-    )
-}
+      </div>
+      <div className="absolute bottom-0 left-0 w-full">
+<svg className="waves" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+<defs>
+<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g className="parallax">
+<use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+<use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+<use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+<use xlinkHref="#gentle-wave" x="48" y="7" fill="#fff" />
+</g>
+</svg>
+</div>
 
 
-export default Home
+
+
+    </div>
+  );
+};
+
+export default Home;
