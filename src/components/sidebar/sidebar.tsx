@@ -2,6 +2,7 @@ import Image from "next/image";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useEffect, useState } from "react";
 
+
 interface SideBarProps {
   item: string[] | [];
 }
@@ -69,8 +70,9 @@ const SideBar = (props: SideBarProps) => {
           );
         })}
         <p className="text-xs mt-8 m-auto text-center w-full">
-          Copyright ©2023 All rights reserved
+          Copyright ©2023 Todos os direitos reservados.
         </p>
+        
       </div>
       </div>
   );

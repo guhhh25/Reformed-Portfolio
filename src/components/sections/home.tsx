@@ -5,12 +5,15 @@ import Typewriter from "typewriter-effect";
 import { motion, easeInOut } from "framer-motion";
 
 
+
+
 const Home: FunctionComponent = () => {
 
 
 
   return (
     <div className="flex flex-col  md:flex lg:flex-row Leckerli text-[40px] items-center md:py-24 md:px-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-800">
+     
       <div className="flex flex-col gap-y-10 w-full mt-8  text-center">
         <Typewriter
           onInit={(typewriter) => {
@@ -41,6 +44,7 @@ const Home: FunctionComponent = () => {
             ease: easeInOut,
           }}
         >
+          
           <Image
             src={Astronaut}
             alt="eae"

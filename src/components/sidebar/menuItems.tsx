@@ -8,11 +8,11 @@ import {
 } from "react-icons/hi";
 
 const menuItems = [
-  { Title: "Home", Icon: <HiHome />, Href: "" },
-  { Title: "About", Icon: <HiUser />, Href: "" },
-  { Title: "Projects", Icon: <HiFolder />, Href: "" },
-  { Title: "Experience", Icon: <HiBriefcase />, Href: "" },
-  { Title: "Contact", Icon: <HiMail />, Href: "" },
+  { Title: "Inicio", Icon: <HiHome />, Href: "" },
+  { Title: "Sobre", Icon: <HiUser />, Href: "" },
+  { Title: "Projetos", Icon: <HiFolder />, Href: "" },
+  { Title: "Experiência", Icon: <HiBriefcase />, Href: "" },
+  { Title: "Contato", Icon: <HiMail />, Href: "" },
 ];
 
 export default menuItems;
