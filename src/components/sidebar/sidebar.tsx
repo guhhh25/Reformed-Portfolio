@@ -12,11 +12,11 @@ const SideBar = (props) => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      setIsOpen(window.innerWidth > 768 ? true : false);
+      setIsOpen(window.innerWidth > 1024 ? true : false);
     }
 
     const handleResize = () => {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth >= 1024) {
         setIsOpen(true);
       }else{
         setIsOpen(false);
@@ -31,9 +31,9 @@ const SideBar = (props) => {
   }, []);
 
   return (
-    <div className="absolute md:static z-20">
+    <div className="fixed  z-20 ">
       <nav>
-        <div className="md:hidden flex items-center absolute ">
+        <div className="lg:hidden flex items-center absolute ">
           <AiOutlineMenu
             className="
               
@@ -43,7 +43,7 @@ const SideBar = (props) => {
         </div>
       </nav>
       <div
-  className={`md:flex flex flex-col items-center bg-[#1C1C1C] h-screen ${
+  className={`lg:flex flex flex-col items-center bg-[#1C1C1C] h-screen  ${
     isOpen ? "w-[320px]" : "w-0 hidden"
   } text-white transition-all duration-300 ease-in-out`}
 >
