@@ -23,7 +23,7 @@ const Projects:FunctionComponent = () => {
                 return (
                     // eslint-disable-next-line react/jsx-key
                     <div data-aos="fade-up">
-                    <Card key={key} image={items.image} title={items.title} description={items.description} btnClass={items.btnClass} tecnologies={items.tecnologies}/>
+                    <Card key={key} image={items.image} title={items.title} description={items.description} btnClass={items.btnClass} tecnologies={items.tecnologies} href={items.href}/>
                     </div>
                 )
             })}
