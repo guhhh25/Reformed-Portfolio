@@ -35,9 +35,9 @@ const SideBar = (props) => {
       <nav>
         <div className="md:hidden flex items-center absolute ">
           <AiOutlineMenu
-            className={`${
-              isOpen ? "text-white" : "text-black"
-            } text-3xl cursor-pointer`}
+            className="
+              
+            text-white text-3xl cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
           />
         </div>
