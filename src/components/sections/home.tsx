@@ -15,9 +15,9 @@ const Home: FunctionComponent = () => {
  
 
   return (
-    <div className="flex flex-col  md:flex lg:flex-row  text-[40px] items-center md:py-24 md:px-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-800">
+    <div className="flex flex-col  md:flex lg:flex-row  text-[33px]  md:text-[40px] items-center md:py-24 md:px-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-800">
      
-      <div className="flex flex-col gap-y-10 w-full mt-10   text-center">
+      <div className="flex flex-col gap-y-10 w-full mt-10 h-[300px]  text-center">
         <Typewriter
           onInit={(typewriter) => {
             typewriter
