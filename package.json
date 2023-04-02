@@ -16,6 +16,7 @@
     "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.4",
     "@types/node": "18.13.0",
     "@types/react": "18.0.27",
     "autoprefixer": "^10.4.13",
