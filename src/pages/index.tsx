@@ -4,7 +4,8 @@ import menuItems from "../components/sidebar/menuItems";
 import SideBar from "../components/sidebar/sidebar";
 import Container from "../components/container/container";
 import Home from "../components/sections/home";
-import About from "../components/sections/about";
+
+import Projects from "../components/sections/projects";
 
 
 
@@ -19,7 +20,7 @@ const Main: FunctionComponent = () => {
       <Container>
         <Home/>
  
-        <About/>
+        <Projects/>
       </Container>
       
       </div>
