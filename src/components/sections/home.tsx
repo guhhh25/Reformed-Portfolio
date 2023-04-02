@@ -7,11 +7,12 @@ import Typewriter from "typewriter-effect";
 
 
 
-const Home: FunctionComponent = () => {
-  
-  const myElement = useRef(null);
 
-  
+const Home: FunctionComponent = () => {
+
+ 
+
+ 
 
   return (
     <div className="flex flex-col  md:flex lg:flex-row Leckerli text-[40px] items-center md:py-24 md:px-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-800">
@@ -21,7 +22,7 @@ const Home: FunctionComponent = () => {
           onInit={(typewriter) => {
             typewriter
               .typeString("Gustavo Henrique")
-
+              
               .start();
           }}
         />
@@ -36,9 +37,10 @@ const Home: FunctionComponent = () => {
         />
       </div>
 
-      <div className="flex justify-end w-full">
+      <div className="flex justify-end w-full animating">
      
         <Image
+
           src={Astronaut}
           alt="eae"
           width={440}
