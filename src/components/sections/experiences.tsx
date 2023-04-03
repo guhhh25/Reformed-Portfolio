@@ -37,7 +37,7 @@ utilizando dotnet.
         <VerticalTimelineElement
           className="vertical-timeline-element"
           date="??/???? - ??/????"
-          iconStyle={{ background: '#CDDC39', color: '#fff' }}
+          iconStyle={{ background: 'green', color: '#fff' }}
           contentStyle={{ background: '#1C1C1C', color: '#fff' }}
         >
           <h3 className="vertical-timeline-element-title">????</h3>
