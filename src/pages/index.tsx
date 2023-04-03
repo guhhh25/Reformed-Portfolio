@@ -6,6 +6,7 @@ import Container from "../components/card/container/container";
 import Home from "../components/sections/home";
 
 import Projects from "../components/sections/projects";
+import Experiences from "../components/sections/experiences";
 
 
 
@@ -22,6 +23,8 @@ const Main: FunctionComponent = () => {
         <Home/>
         
         <Projects/>
+
+        <Experiences/>
        
       </Container>
       

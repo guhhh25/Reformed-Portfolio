@@ -9,7 +9,6 @@ import {
 
 const menuItems = [
   { Title: "Inicio", Icon: <HiHome />, Href: "" },
-  { Title: "Sobre", Icon: <HiUser />, Href: "" },
   { Title: "Projetos", Icon: <HiFolder />, Href: "" },
   { Title: "Experiência", Icon: <HiBriefcase />, Href: "" },
   { Title: "Contato", Icon: <HiMail />, Href: "" },

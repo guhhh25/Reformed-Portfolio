@@ -27,7 +27,7 @@ const projectData = [
     {
         image: pizzaria,
         title: "Pizzaria layout",
-        description: "Quiz com tempo e perguntas genericas brasileiras.",
+        description: "Layout de pizzaria.",
         btnClass:"btn-grad-orange",
         tecnologies:"HTML, CSS, Vanilla Javascript",
         href:"https://github.com/guhhh25/pizzaria"
@@ -35,7 +35,7 @@ const projectData = [
     {
         image: montyhall,
         title: "Monty Hall",
-        description: "Quiz com tempo e perguntas genericas brasileiras.",
+        description: "Jogo de Monty Hall",
         btnClass:"btn-grad-gray",
         tecnologies:"NextJS, TailwindCSS, Javascript, Typescript",
         href:"https://github.com/guhhh25/monty-hall"
@@ -43,7 +43,7 @@ const projectData = [
     {
         image: templateAdmin,
         title: "Template Admin",
-        description: "Quiz com tempo e perguntas genericas brasileiras.",
+        description: "Interface de login com autenticação e cadastro.",
         btnClass:"btn-grad-white",
         tecnologies:"ReactJS, Javascript, Typescript, Firebase, React Hooks",
         href:"https://github.com/guhhh25/template-admin"
@@ -51,7 +51,7 @@ const projectData = [
     {
         image: cep,
         title: "CEP Locator",
-        description: "Quiz com tempo e perguntas genericas brasileiras.",
+        description: "Projeto consumindo uma API de CEP.",
         btnClass:"btn-grad-black",
         tecnologies:"HTML, CSS, CEP API",
         href:"https://github.com/guhhh25/API-Cep"
