@@ -7,6 +7,7 @@ import Home from "../components/sections/home";
 
 import Projects from "../components/sections/projects";
 import Experiences from "../components/sections/experiences";
+import Contact from "../components/sections/contact";
 
 
 
@@ -25,7 +26,7 @@ const Main: FunctionComponent = () => {
         <Projects/>
 
         <Experiences/>
-       
+       <Contact/>
       </Container>
       
       </div>
