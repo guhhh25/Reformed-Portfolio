@@ -7,7 +7,7 @@ import WavesWhite from "../waves/wavesWhite";
 
 const Experiences = () => {
   return (
-    <div className="relative">
+    <div className="relative" id="experiences">
       <div className="mt-8 text-black ">
         <p className="text-3xl font-bold px-8 py-14 text-white">Experiências</p>
         <VerticalTimeline>

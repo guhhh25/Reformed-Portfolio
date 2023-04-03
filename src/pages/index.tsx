@@ -19,7 +19,7 @@ const Main: FunctionComponent = () => {
  
   return (
     <div className="md:flex w-full">
-      <SideBar item={menuItems as any} />
+      <SideBar item={menuItems as any} id={"projects"}/>
       <Container>
         <Home/>
         

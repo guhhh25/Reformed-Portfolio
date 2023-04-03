@@ -5,8 +5,10 @@ import Typewriter from "typewriter-effect";
 import WavesWhite from "../waves/wavesWhite";
 
 const Home: FunctionComponent = () => {
+
+
   return (
-    <div className="roboto flex flex-col  lg:flex-row  text-[33px]  md:text-[40px] items-center md:py-0 justify-center h-screen  text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-800">
+    <div id="home" className="roboto flex flex-col  lg:flex-row  text-[33px]  md:text-[40px] items-center md:py-0 justify-center h-screen  text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-800">
       <div className="flex flex-col gap-y-0 w-full mt-10  text-center">
         <Typewriter
           onInit={(typewriter) => {

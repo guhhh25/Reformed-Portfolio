@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useEffect, useState } from "react";
+import { Link } from 'react-scroll';
 
 import euImage from "./../../images/euImage.jpg";
 
@@ -9,6 +10,25 @@ const SideBar = (props) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [isSelected, setIsSelected] = useState(0);
+  const [positionY, setPositionY] = useState(0)
+  const [name, setName] = useState("")
+
+
+
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleScroll = () => {
+        setPositionY(window.scrollY)
+      };
+
+      window.addEventListener("scroll", handleScroll);
+
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, []);
+
+
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -58,20 +78,30 @@ const SideBar = (props) => {
           return (
             // eslint-disable-next-line react/jsx-key
             <div className="w-full">
+               <Link
+            activeClass="active"
+            to={item.id}
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
               <div
                 key={key}
                 className="flex w-full  items-center justify-between px-5 py-4 text-sm cursor-pointer"
               >
-                <p className={`${isSelected === key ? "text-yellow-500" : ""}`}>
+                <p className={`${name ===  item.Title ? "text-yellow-500" : ""}`}>
                   {item.Title}
+                  {console.log(item.Title, name)}
                 </p>
-                <p className={`${isSelected === key ? "text-yellow-500" : ""}`}>
+                <p className={`${isSelected > 0 ? "text-yellow-500" : ""}`}>
                   {item.Icon}
                 </p>
               </div>
               <div className="px-5">
                 <hr />
               </div>
+              </Link>
             </div>
           );
         })}
