@@ -47,13 +47,32 @@ const Experiences = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element"
-            date="??/???? - ??/????"
+            date="04/2023 - 03/2024"
             iconStyle={{ background: "green", color: "#fff" }}
             contentStyle={{ background: "#1C1C1C", color: "#fff" }}
           >
-            <h3 className="vertical-timeline-element-title">????</h3>
-            <h4 className="vertical-timeline-element-subtitle">?????</h4>
-            <p>???????????</p>
+             <h3 className="vertical-timeline-element-title">
+               Desenvolvedor Fullstack Junior
+            </h3>
+            <h3 className="vertical-timeline-element-title">Gobi</h3>
+            <h4 className="vertical-timeline-element-subtitle"></h4>
+            <p>Responsável pela criação de novas aplicações utilizando como principais tecnologias .NET, ASP.NET, 
+Entity Framework, SQL, Vanilla Javascript e ReactJS.
+</p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element"
+            date="03/2024 - 06/2024"
+            iconStyle={{ background: "purple", color: "#fff" }}
+            contentStyle={{ background: "#1C1C1C", color: "#fff" }}
+          >
+             <h3 className="vertical-timeline-element-title">
+               Desenvolvedor Fullstack Junior
+            </h3>
+            <h3 className="vertical-timeline-element-title">Tito</h3>
+            <h4 className="vertical-timeline-element-subtitle"></h4>
+            <p>Responsável pela criação de novas aplicações utilizando como principais tecnologias PHP, Laravel, 
+ReactJS, UIPath, SQL, Python.</p>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
